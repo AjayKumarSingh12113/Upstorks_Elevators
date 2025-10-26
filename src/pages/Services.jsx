@@ -89,7 +89,10 @@ export const Services = () => {
               selectedUncle.id === uncle.id
                 ? "bg-blue-600 text-white shadow-md"
                 : "bg-gray-200 hover:bg-gray-300 text-gray-700"
-            }`}
+              }
+              text-sm md:text-base break-words text-left
+            `}
+            
           >
             {uncle.name}
           </button>
