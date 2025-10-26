@@ -30,7 +30,7 @@ export default function About() {
         <div>
           <h1 className="text-4xl font-bold mb-2 text-gray-900">WHO WE ARE</h1>
           <h2 className="text-2xl font-medium mb-4 text-gray-800">
-            We at <span className="text-green-700">UPSTORKS-ELEVATORS</span>
+            We at <span className="text-red-700">UPSTORKS</span>-<span className='text-blue-900'>ELEVATORS</span>
           </h2>
           <p className="text-gray-700 leading-relaxed">
             UPSTORKS-ELEVATORS is the leading elevator company in Delhi, supplying, installing, 

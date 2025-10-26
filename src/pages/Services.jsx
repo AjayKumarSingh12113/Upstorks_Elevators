@@ -75,24 +75,24 @@ export const Services = () => {
   }, [serviceId]);
 
   return (
-    <div className="flex min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      < ExtraForm />
+    <div className="flex flex-col md:flex-row min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      <ExtraForm />
+
       {/* Left Sidebar */}
-      <div className="w-1/4 bg-white shadow-lg p-6 flex flex-col gap-4 border-r border-gray-300">
-        <h2 className="text-xl font-bold text-gray-700  md:ml-25 p-2">Our Services</h2>
+      <div className="w-full md:w-1/4 bg-white shadow-lg p-4 md:p-6 flex flex-col gap-4 border-b md:border-b-0 md:border-r border-gray-300">
+        <h2 className="text-xl font-bold text-gray-700 p-2">Our Services</h2>
         <hr />
         {uncles.map((uncle) => (
           <button
             key={uncle.id}
             onClick={() => setSelectedUncle(uncle)}
-            className={`p-3 rounded-lg font-semibold transition-all duration-300 ${
-              selectedUncle.id === uncle.id
+            className={`p-2 md:p-3 rounded-lg font-semibold transition-all duration-300
+              ${selectedUncle.id === uncle.id
                 ? "bg-blue-600 text-white shadow-md"
                 : "bg-gray-200 hover:bg-gray-300 text-gray-700"
               }
-              text-sm md:text-base break-words text-left
+              text-sm md:text-base break-words text-center w-full
             `}
-            
           >
             {uncle.name}
           </button>
@@ -100,13 +100,13 @@ export const Services = () => {
       </div>
 
       {/* Right Content */}
-      <div className="w-3/4 flex flex-col items-center py-10 px-8 overflow-y-auto">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6 tracking-wide">
+      <div className="w-full md:w-3/4 flex flex-col items-center py-10 px-5 md:px-8 overflow-y-auto">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 tracking-wide text-center md:text-left">
           {selectedUncle.name}
         </h2>
 
-        <div className="bg-white p-10 rounded-2xl shadow-xl w-full max-w-5xl relative">
-          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+        <div className="bg-white p-6 md:p-10 rounded-2xl shadow-xl w-full max-w-5xl relative">
+          <p className="text-sm md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
             {selectedUncle.description.slice(
               0,
               selectedUncle.description.length / 2
@@ -114,16 +114,16 @@ export const Services = () => {
           </p>
 
           {/* Image Section */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-6 md:mb-8">
             <img
               src={selectedUncle.image}
               alt={selectedUncle.name}
               onClick={() => setShowPopup(true)}
-              className="w-2/5 max-w-[250px] cursor-pointer rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
+              className="w-2/3 md:w-2/5 max-w-[250px] cursor-pointer rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
             />
           </div>
 
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-sm md:text-lg text-gray-700 leading-relaxed">
             {selectedUncle.description.slice(
               selectedUncle.description.length / 2
             )}
