@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function ExtraForm() {
   const [openWhatsApp, setOpenWhatsApp] = useState(false);
@@ -80,10 +81,12 @@ export default function ExtraForm() {
   return (
     <div className="fixed bottom-10 right-10 z-50 flex flex-col gap-3">
       {/* Buttons */}
-      <button onClick={() => setOpenWhatsApp(!openWhatsApp)} className="bg-green-600 text-white px-5 py-3 rounded-full shadow-lg hover:bg-green-700 transition-all">
-        📞 Contact via WhatsApp
+      <button
+        onClick={() => setOpenWhatsApp(!openWhatsApp)}
+        className="bg-green-500 hover:bg-green-600 text-white p-6 rounded-full shadow-lg flex items-center justify-center transition-all"
+      >
+        <FaWhatsapp size={40} />
       </button>
-
       <button onClick={() => setOpenGmail(!openGmail)} className="bg-blue-600 text-white px-5 py-3 rounded-full shadow-lg hover:bg-blue-700 transition-all">
         📧 Contact via Gmail
       </button>
