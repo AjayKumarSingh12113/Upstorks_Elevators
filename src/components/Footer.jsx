@@ -5,7 +5,7 @@ import qrImage from "../images/qr.jpg";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-200 py-12 w-full">
-      <div className="max-w-7xl mx-auto px-3 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
 
         {/* 1. Company Info */}
         <div>
@@ -28,7 +28,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* 3. Links + Social Media */}
+        {/* 3. Company Links + Social Media */}
         <div>
           <h4 className="font-semibold text-lg">Company Links</h4>
           <ul className="mt-3 space-y-2 text-sm">
@@ -38,14 +38,23 @@ export default function Footer() {
             <li><Link to="/contact" className="hover:text-white transition-colors">Contact Page</Link></li>
           </ul>
 
-          {/* Social Media */}
           <div className="flex gap-3 mt-4">
-            {/* SVG icons remain unchanged */}
+            {/* Social Media icons can be added here */}
           </div>
         </div>
 
-        {/* 4. Contact + QR */}
-        <div className="flex flex-col items-center md:items-end">
+        {/* 4. QR Code */}
+        <div className="flex flex-col items-center md:items-start">
+          <img
+            src={qrImage}
+            alt="QR Code"
+            className="w-36 h-36 md:w-48 md:h-48 object-contain rounded-md shadow-lg"
+          />
+          <span className="text-xs mt-2 text-gray-400">Scan to connect</span>
+        </div>
+
+        {/* 5. Contact Info */}
+        <div className="flex flex-col items-center md:items-start">
           <h4 className="font-semibold text-lg">Contact</h4>
           <p className="mt-2 text-sm">
             <a href="mailto:upstorkselevators@gmail.com" className="hover:text-white transition-colors">
@@ -57,16 +66,6 @@ export default function Footer() {
               +91 9911408893
             </a>
           </p>
-
-          {/* QR Code */}
-          <div className="mt-6 flex flex-col items-center md:items-end p-2">
-            <img
-              src={qrImage}
-              alt="QR Code"
-              className="w-36 h-36 md:w-48 md:h-48 object-contain rounded-md shadow-lg"
-            />
-            <span className="text-xs mt-2 text-gray-400">Scan to connect</span>
-          </div>
         </div>
 
       </div>
