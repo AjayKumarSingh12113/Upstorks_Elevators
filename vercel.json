@@ -8,5 +8,11 @@
       "destination": "https://www.upstorkselevators.in/$1",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
   ]
 }
