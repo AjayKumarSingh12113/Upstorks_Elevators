@@ -2,6 +2,9 @@
   "redirects": [
     {
       "source": "/(.*)",
+      "has": [
+        { "type": "host", "value": "upstorks-elevators.vercel.app" }
+      ],
       "destination": "https://www.upstorkselevators.in/$1",
       "permanent": true
     }
