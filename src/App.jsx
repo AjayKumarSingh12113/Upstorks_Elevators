@@ -27,7 +27,7 @@ function App() {
               <>
                 <Helmet>
                   <title>Upstorks Elevators</title>
-                  <meta name="description" content="Upstorks Elevators provides elevator solutions, installation, and maintenance services across India." />
+                  <meta name="description" content="Upstorks Elevators provides elevator solutions, installation, and maintenance services across Delhi." />
                   <link rel="canonical" href="https://www.upstorkselevators.in/" />
                 </Helmet>
                 <Home />
@@ -63,7 +63,7 @@ function App() {
               <>
                 <Helmet>
                   <title>Projects - Upstorks Elevators</title>
-                  <meta name="description" content="Explore our elevator installation and maintenance projects across India." />
+                  <meta name="description" content="Explore our elevator installation and maintenance projects across Delhi." />
                   <link rel="canonical" href="https://www.upstorkselevators.in/projects" />
                 </Helmet>
                 <Products />
